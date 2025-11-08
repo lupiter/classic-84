@@ -54,14 +54,29 @@ body, .theme-light, .theme-dark {
 	box-shadow: none;
 }
 
+.lt-underline.lt-major:hover {
+	text-decoration: black wavy underline 2px;
+	background-color: transparent;
+}
+
 .lt-underline.lt-minor, .lt-minor .lt-title > span  {
 	text-decoration: black dashed underline 1px;
 	box-shadow: none;
 }
 
+.lt-underline.lt-minor:hover {
+	text-decoration: black dashed underline 2px;
+	background-color: transparent;
+}
+
 .lt-underline.lt-style, .lt-style .lt-title > span {
 	text-decoration: black dotted underline 1px;
 	box-shadow: none;
+}
+
+.lt-underline.lt-style:hover {
+	text-decoration: black dotted underline 2px;
+	background-color: transparent;
 }
 
 .lt-bottom {
