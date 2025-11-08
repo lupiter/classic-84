@@ -1,4 +1,6 @@
-body, .theme-light, .theme-dark {
+body,
+.theme-light,
+.theme-dark {
 	--radius-s: 0px;
 	--radius-m: 0px;
 	--radius-l: 0px;
@@ -8,7 +10,6 @@ body, .theme-light, .theme-dark {
 	--toggle-radius: 0px;
 	--toggle-thumb-radius: 0px;
 	--slider-thumb-radius: 0px;
-
 
 	--color-base-00: white;
 	--color-base-05: white;
@@ -28,7 +29,7 @@ body, .theme-light, .theme-dark {
 
 	--nav-indentation-guide-color: black;
 
-	--background-modifier-cover: rgba(0,0,0, 0.5);
+	--background-modifier-cover: rgba(0, 0, 0, 0.5);
 
 	--modal-border-color: black;
 	--shadow-l: 3px 3px 0px black;
@@ -39,9 +40,12 @@ body, .theme-light, .theme-dark {
 	--background-secondary: white;
 
 	--toggle-border-width: 1px;
+	--text-color: black;
+	--text-on-accent: black;
 
 	--text-selection: black;
 	--text-highlight-bg: black;
+	--text-success: black;
 }
 
 ::selection {
@@ -49,7 +53,8 @@ body, .theme-light, .theme-dark {
 	background-color: var(--text-selection);
 }
 
-.lt-underline.lt-major, .lt-major .lt-title > span {
+.lt-underline.lt-major,
+.lt-major .lt-title > span {
 	text-decoration: black wavy underline 1px;
 	box-shadow: none;
 }
@@ -59,7 +64,8 @@ body, .theme-light, .theme-dark {
 	background-color: transparent;
 }
 
-.lt-underline.lt-minor, .lt-minor .lt-title > span  {
+.lt-underline.lt-minor,
+.lt-minor .lt-title > span {
 	text-decoration: black dashed underline 1px;
 	box-shadow: none;
 }
@@ -69,7 +75,8 @@ body, .theme-light, .theme-dark {
 	background-color: transparent;
 }
 
-.lt-underline.lt-style, .lt-style .lt-title > span {
+.lt-underline.lt-style,
+.lt-style .lt-title > span {
 	text-decoration: black dotted underline 1px;
 	box-shadow: none;
 }
@@ -106,7 +113,8 @@ body, .theme-light, .theme-dark {
 	box-shadow: none;
 }
 
-button.lt-ignore-btn, button.lt-info-button {
+button.lt-ignore-btn,
+button.lt-info-button {
 	border: unset;
 }
 
@@ -114,7 +122,8 @@ button.lt-ignore-btn {
 	border-top: 1px solid black;
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
 	display: none;
 }
 
@@ -141,12 +150,37 @@ svg * {
 	background: transparent;
 }
 
-body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
-	border: 1px solid black;
-	background: white;
+
+body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
+	text-decoration: underline;
+	background: transparent;
 }
 
-select, .dropdown, button {
+body:not(.is-grabbing) .nav-file-title.is-active:hover,
+body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+body:not(.is-grabbing) .nav-file-title.is-active,
+body:not(.is-grabbing) .nav-folder-title.is-active {
+	color: white;
+	background-color: black;
+}
+
+.nav-files-container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+body:not(.is-grabbing) .nav-file-title,
+body:not(.is-grabbing) .nav-folder-title,
+.nav-file-title,
+.nav-folder-title {
+	border: 1px solid transparent;
+	background-color: transparent;
+}
+
+select,
+.dropdown,
+button {
 	border: 1px solid black;
 }
 
@@ -157,15 +191,24 @@ select, .dropdown, button {
 .checkbox-container {
 	box-shadow: none;
 	border: 1px solid black;
-	height: calc(var(--toggle-thumb-height) + var(--toggle-border-width)* 6);
+	height: calc(var(--toggle-thumb-height) + var(--toggle-border-width) * 6);
 	width: calc(var(--toggle-width) + var(--toggle-border-width) * 4);
 }
 .checkbox-container::after {
-	border: 1px solid black;	
+	border: 1px solid black;
 	box-shadow: none;
 }
 
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
 	border: 1px solid black;
 	box-shadow: var(--input-shadow);
+}
+
+.clickable-icon {
+	border: none;
+}
+
+.mod-left-split .workspace-tab-header.is-active {
+	border-bottom: 1px solid black;
+	background-color: transparent;
 }
