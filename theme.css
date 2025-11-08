@@ -40,8 +40,63 @@ body, .theme-light, .theme-dark {
 
 	--toggle-border-width: 1px;
 
+	--text-selection: black;
+	--text-highlight-bg: black;
+}
 
+::selection {
+	color: white;
+	background-color: var(--text-selection);
+}
 
+.lt-underline.lt-major, .lt-major .lt-title > span {
+	text-decoration: black wavy underline 1px;
+	box-shadow: none;
+}
+
+.lt-underline.lt-minor, .lt-minor .lt-title > span  {
+	text-decoration: black dashed underline 1px;
+	box-shadow: none;
+}
+
+.lt-underline.lt-style, .lt-style .lt-title > span {
+	text-decoration: black dotted underline 1px;
+	box-shadow: none;
+}
+
+.lt-bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 6px;
+}
+
+.lt-buttoncontainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.lt-info-container {
+	position: unset;
+	padding-top: 10px;
+}
+
+.lt-predictions-container.cm-tooltip {
+	border-radius: var(--radius-s);
+	box-shadow: var(--shadow-l);
+}
+
+.lt-ignore-button {
+	box-shadow: none;
+}
+
+button.lt-ignore-btn, button.lt-info-button {
+	border: unset;
+}
+
+button.lt-ignore-btn {
+	border-top: 1px solid black;
 }
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
